@@ -23,7 +23,7 @@ SV * win32_fmode(pTHX_  FILE *stream ) {
 */
   return newSViv(stream->_flag);
 #else
-  croak("win32_fmode(aTHX) function works only with Win32");
+  croak("win32_fmode function works only with Win32");
 #endif
 }
 
@@ -51,9 +51,9 @@ SV * perliol_readable(pTHX_ SV * handle) {
        if(flags & PERLIO_F_CANREAD) return newSVuv(1);
        return newSVuv(0);
      }
-     croak("Couldn't validate the filehandle passed to perliol_readable(aTHX)");
+     croak("Couldn't validate the filehandle passed to perliol_readable");
 #else
-     croak("perliol_readable(aTHX) function works only with perl 5.8 or later");
+     croak("perliol_readable function works only with perl 5.8 or later");
 #endif
 }
 
@@ -69,9 +69,9 @@ SV * perliol_writable(pTHX_ SV * handle) {
        if(flags & PERLIO_F_CANWRITE) return newSVuv(1);
        return newSVuv(0);
      }
-     croak("Couldn't validate the filehandle passed to perliol_writable(aTHX)");
+     croak("Couldn't validate the filehandle passed to perliol_writable");
 #else
-     croak("perliol_writable(aTHX) function works only with perl 5.8 or later");
+     croak("perliol_writable function works only with perl 5.8 or later");
 #endif
 }
 
@@ -82,7 +82,7 @@ SV * is_appendable(pTHX_ SV * handle) {
      if (IoTYPE(io) == IoTYPE_APPEND) return newSVuv(1);
      return newSVuv(0);
 #else
-     croak("is_appendable(aTHX) function implemented only with perl 5.6.1 or later");
+     croak("is_appendable function implemented only with perl 5.6.1 or later");
 #endif
 }
 
