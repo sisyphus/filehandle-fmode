@@ -1,4 +1,5 @@
 0.14 - Add metadata to Makefile.PL.
+     - Define PERL_NO_GET_CONTEXT
 
 0.13 - Apply patch from Xavier Guimard. (Ticket 80607)
 
