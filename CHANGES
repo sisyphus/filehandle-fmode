@@ -1,4 +1,5 @@
 0.15
+     - Doc improvements.
 
 0.14 - Add metadata to Makefile.PL.
      - Define PERL_NO_GET_CONTEXT
