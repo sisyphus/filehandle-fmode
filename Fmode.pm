@@ -151,10 +151,9 @@ FileHandle::Fmode - determine whether a filehandle is opened for reading, writin
  function call in an eval{} block.
 
  Note that it may be possible that a filehandle opened for writing may
- become unwritable - if (eg) the disk becomes full. I don't know how
- the below functions would be affected by such an event. I suspect
- that they would be unaware of the change ... but I haven't actually
- checked.
+ become unwritable. If for example the disk runs full on Linux, a write
+ attempt will fail, while is_W($fh) still reports true. The behavior
+ for other platforms is not tested.
 
  $bool = is_R($fh);
  $bool = is_R(\*FH);
