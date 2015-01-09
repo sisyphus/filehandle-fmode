@@ -163,22 +163,22 @@ FileHandle::Fmode - determine whether a filehandle is opened for reading, writin
  $bool = is_W($fh);
  $bool = is_W(\*FH);
   Returns true if the filehandle is writable.
-  Else returns false
+  Else returns false.
 
  $bool = is_RO($fh);
  $bool = is_RO(\*FH);
   Returns true if the filehandle is readable but not writable.
-  Else returns false
+  Else returns false.
 
  $bool = is_WO($fh);
  $bool = is_WO(\*FH);
   Returns true if the filehandle is writable but not readable.
-  Else returns false
+  Else returns false.
 
  $bool = is_RW($fh);
  $bool = is_RW(\*FH);
   Returns true if the filehandle is both readable and writable.
-  Else returns false
+  Else returns false.
 
  $bool = is_A($fh);
  $bool = is_A(\*FH);
