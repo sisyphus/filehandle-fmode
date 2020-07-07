@@ -17,7 +17,7 @@ our $VERSION = '0.15';
 %FileHandle::Fmode::EXPORT_TAGS = (all => [qw
     (is_R is_W is_RO is_WO is_RW is_arg_ok is_A is_FH)]);
 
-bootstrap FileHandle::Fmode $VERSION;
+FileHandle::Fmode->DynaLoader::bootstrap($VERSION);
 
 my $is_win32 = $^O =~ /mswin32/i ? 1 : 0;
 
