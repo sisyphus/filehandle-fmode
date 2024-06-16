@@ -6,7 +6,7 @@ use FileHandle::Fmode qw(:all);
 warn "\nIS_WIN32     : ", FileHandle::Fmode::IS_WIN32, "\n";
 warn "LIBC_IS_UCRT : ", FileHandle::Fmode::LIBC_IS_UCRT, "\n";
 
-print "1..52\n";
+print "1..53\n";
 
 my $no_skip = ($] < 5.006001 && $^O =~ /mswin32/i) ? 0 : 1;
 
@@ -358,3 +358,11 @@ else {
 }
 
 close(WR) or die "Can't close temp2.txt after opening for writing: $!";
+
+my $ver = '0.16';
+if($Filehandle::Fmode::VERSION eq $ver) { print "ok 53\n" }
+else {
+  warn "\$FileHandle::Fmode::VERSION ($FileHandle::Fmode::VERSION) ne '$ver'\n";
+  print "not ok 53\n";
+}
+

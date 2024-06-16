@@ -11,7 +11,7 @@ require DynaLoader;
 
 *is_FH = \&is_arg_ok;
 
-our $VERSION = '0.15';
+our $VERSION = '0.16';
 #$VERSION = eval $VERSION;
 
 @FileHandle::Fmode::ISA = qw(Exporter DynaLoader);

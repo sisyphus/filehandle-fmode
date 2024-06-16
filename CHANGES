@@ -1,3 +1,5 @@
+0.16
+
 0.15
      - Doc improvements.
      - Avoid win32_fmode() when perl is built by UCRT compiler, as UCRT changes struct _iobuf.
