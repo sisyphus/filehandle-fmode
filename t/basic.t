@@ -360,7 +360,7 @@ else {
 close(WR) or die "Can't close temp2.txt after opening for writing: $!";
 
 my $ver = '0.16';
-if($Filehandle::Fmode::VERSION eq $ver) { print "ok 53\n" }
+if($FileHandle::Fmode::VERSION eq $ver) { print "ok 53\n" }
 else {
   warn "\$FileHandle::Fmode::VERSION ($FileHandle::Fmode::VERSION) ne '$ver'\n";
   print "not ok 53\n";
